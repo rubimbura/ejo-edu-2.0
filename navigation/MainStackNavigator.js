@@ -30,6 +30,21 @@ import ParticipationOverviewScreen from '../screens/participation/ParticipationO
 import ParticipationCommnetsScreen from '../screens/participation/ParticipationCommentScreen';
 
 
+import LessonPlanScreen from '../screens/lessonPlan';
+import AddLessonPlanName from '../screens/lessonPlan/AddLessonPlanName';
+import CornfirmLessnPlanName from '../screens/lessonPlan/ConfirmLessonPlanName';
+import LessonPlanKnowledgeScreen from '../screens/lessonPlan/LessonPlanKnowledgeScreen';
+import LessonPlanConfirmKnowledge from '../screens/lessonPlan/LessonPlanConfirmKnowledge';
+import LessonPlanSkillsScreen from '../screens/lessonPlan/LessonPlanSkillsScreen';
+import LessonPlanConfirmAttitudeAndValues from '../screens/lessonPlan/LessonPlanConfirmAttitudeAndValues';
+import LessonPlanAttitudeAndValues from '../screens/lessonPlan/LessonPlanAttitudeAndValues';
+import LessonPlanConfirmSkills from '../screens/lessonPlan/LessonPlanConfirmSkills';
+import LessonPlanIntroduction from '../screens/lessonPlan/LessonPlanIntroduction';
+import LessonPlanDevelopemnt from '../screens/lessonPlan/LessonPlanDevelopment';
+import LessonPlanConculusion from '../screens/lessonPlan/LessonPlanConculusion';
+import LessonPlanOverview from '../screens/lessonPlan/LessonPlanOverview';
+
+
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
@@ -51,9 +66,6 @@ const HomeStackNavigator = () => {
       <Stack.Screen name='AttandanceOverviewScreen' component={AttendanceOverviewScreen}/>
       <Stack.Screen name='AttandanceCommentsScreen' component={AttendanceCommentsScreen}/>
 
-
-
-
       <Stack.Screen name='DisciplineScreen' component={DisciplineScreen}/>
       <Stack.Screen name='DisciplineStep1Screen' component={DisciplineStep1Screen}/>
       <Stack.Screen name='DiscplineStep2Screen' component={DiscplineStep2Screen}/>
@@ -61,15 +73,25 @@ const HomeStackNavigator = () => {
       <Stack.Screen name='DisciplineOverviewScreen' component={DisciplineOverviewScreen}/>
       <Stack.Screen name='DisciplineCommnetsScreen' component={DisciplineCommnetsScreen}/>
 
-
-
       <Stack.Screen name='ParticipationScreen' component={ParticipationScreen}/>
       <Stack.Screen name='AbilityAssesmentScreen' component={AbilityAssesmentScreen}/>
       <Stack.Screen name='ChooseAssesmentScreen' component={ChooseAssesmentScreen}/>
       <Stack.Screen name='ParticipationOverviewScreen' component={ParticipationOverviewScreen}/>
       <Stack.Screen name="ParticipationCommnetsScreen" component={ParticipationCommnetsScreen}/>
 
-      
+      <Stack.Screen name='LessonPlanScreen' component={LessonPlanScreen}/>
+      <Stack.Screen name='AddLessonPlanName' component={AddLessonPlanName}/>
+      <Stack.Screen name='ConfirmLessonPlanName' component={CornfirmLessnPlanName}/>
+      <Stack.Screen name='LessonPlanKnowledge' component={LessonPlanKnowledgeScreen}/>
+      <Stack.Screen name='ConfirmKnowledge' component={LessonPlanConfirmKnowledge}/>
+      <Stack.Screen name='lessonPlanSkills' component={LessonPlanSkillsScreen}/>
+      <Stack.Screen name='ConfirmSkills' component={LessonPlanConfirmSkills}/>
+      <Stack.Screen name='LessonPlanAttitudeAndValues' component={LessonPlanAttitudeAndValues}/>
+      <Stack.Screen name='ConfirmAttitudeAndValues' component={LessonPlanConfirmAttitudeAndValues}/>
+      <Stack.Screen name='lessonPlanIntroduction' component={LessonPlanIntroduction}/>
+      <Stack.Screen name='lessonPlanDevelopemnt' component={LessonPlanDevelopemnt}/>
+      <Stack.Screen name='lessonPlanConculusion' component={LessonPlanConculusion}/>
+      <Stack.Screen name='lessonPlanOverview' component={LessonPlanOverview}/>
 
     </Stack.Navigator>
   )

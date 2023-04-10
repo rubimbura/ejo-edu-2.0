@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   },
   moduleText: {
     color: "#fff",
-    fontSize: 30,
+    fontSize: 20,
     lineHeight: 48,
     fontFamily: "sansMedium",
   },
@@ -68,12 +68,12 @@ const styles = StyleSheet.create({
   },
   subModuleText: {
     color: "white",
-    fontSize: 20,
+    fontSize: 16,
     fontFamily: "sansMedium",
   },
   subject: {
     color: "white",
-    fontSize: 18,
+    fontSize: 14,
     fontFamily: "sansMedium",
   },
   currentDate: {

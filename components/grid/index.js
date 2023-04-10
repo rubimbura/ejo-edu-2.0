@@ -26,7 +26,7 @@ import background_icon5 from "../../assets/images/background5.png";
 import background_icon6 from "../../assets/images/background6.png";
 import background_icon7 from "../../assets/images/background7.png";
 import background_icon8 from "../../assets/images/background8.png";
-import Colors from "../../constants/Colors";
+
 
 const Grid = ({ navigation }) => {
   return (
@@ -70,8 +70,8 @@ const Grid = ({ navigation }) => {
           </ImageBackground>
         </TouchableOpacity>
         <TouchableOpacity
-          // onPress={() => navigation.navigate("LessonScreen")}
-          style={[styles.container, {opacity: 0.5}]}
+          onPress={() => navigation.navigate("LessonPlanScreen")}
+          style={[styles.container]}
         >
           <ImageBackground
             style={[styles.sub_container]}
