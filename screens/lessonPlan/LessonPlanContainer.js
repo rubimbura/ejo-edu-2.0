@@ -5,15 +5,15 @@ import {
     View
   } from "react-native";
   
-  const LessonPlanContainer = ({name, status, color}) => {
+  const LessonPlanContainer = ({name, status, color, onPress, date}) => {
 
     return (
-      <TouchableOpacity style={styles.container}>
+      <TouchableOpacity style={styles.container} onPress={onPress}>
         <View style={styles.row}>
           <Text style={styles.title}>{name}</Text>
         </View>
         <View style={styles.row}>
-          <Text style={styles.dateText}>2023-01-23</Text>
+          <Text style={styles.dateText}>{date}</Text>
           <View style={styles.statusCtn}>
              <View style={[styles.statusIcon, {backgroundColor: color}]}></View>
              <Text style={styles.dateText}>{status}</Text>

@@ -15,7 +15,10 @@ import {
         <View style={styles.headerCtn}>
           <Text style={styles.placeholder}>{placeholder}</Text>
         </View>
-        <TextInput style={styles.input} />
+        <TextInput 
+          style={styles.input} 
+          value={value}
+         />
       </TouchableOpacity>
     );
   };

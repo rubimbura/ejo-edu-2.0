@@ -15,6 +15,7 @@ import {
   import LessonPlanContainer from "./LessonPlanContainer";
 import SelectField from "../../components/selectField";
 import ContainedTextField from "../../components/textfield/ContainedTextField";
+import { topic, subTopic, unit, LessonPlans, keyUnitCompetency } from '../../utils'
   
   const AddLessonPlanName = ({navigation}) => {
 
@@ -23,29 +24,6 @@ import ContainedTextField from "../../components/textfield/ContainedTextField";
       navigation.navigate('ConfirmLessonPlanName')
     }
     
-    const LessonPlans = [
-      {
-        name: 'New lesson plan',
-        status: 'Ongoing',
-        color: '#FFD700'
-      },
-      {
-        name: 'Lesson plan',
-        status: 'Completed',
-        color: '#537A5A'
-      },
-      {
-        name: 'Lesson Plan name',
-        status: 'Rejected',
-        color: '#E50E0E'
-
-      },
-      {
-        name: 'Lesson plan',
-        status: 'Completed',
-        color: '#537A5A'
-      },
-    ]
 
     var displayStudent = LessonPlans.map((el, id) => {
       if(el.isChecked === undefined){
@@ -56,24 +34,6 @@ import ContainedTextField from "../../components/textfield/ContainedTextField";
       )
     })
 
-    const topics = [
-      {
-        label: 'Item 1',
-        id: 1
-      },
-      {
-        label: 'Item 2',
-        id: 2
-      },
-      {
-        label: 'Item 3',
-        id: 2
-      },
-      {
-        label: 'Item 4',
-        id: 2
-      },
-    ]
 
     return (
       <LinearGradient style={styles.container} colors={["#7C32FF", "#C738D8"]}>
@@ -91,22 +51,22 @@ import ContainedTextField from "../../components/textfield/ContainedTextField";
           <ScrollView style={styles.scrollCtn} showsVerticalScrollIndicator={false}>
             <SelectField
              placeholder="Topic"
-             items={topics}
+             items={topic}
              modalHeader="Select topic"
             />
             <SelectField
              placeholder="Sub Topic"
-             items={topics}
-             modalHeader="Select topic"
+             items={subTopic}
+             modalHeader="Select sub topic"
             />
             <SelectField
              placeholder="Unit"
-             items={topics}
-             modalHeader="Select topic"
+             items={unit}
+             modalHeader="Select unit"
             />
             <SelectField
              placeholder="Lesson Number"
-             items={topics}
+             items={topic}
              modalHeader="Select topic"
              disabled={true}
              value={2}
@@ -114,10 +74,18 @@ import ContainedTextField from "../../components/textfield/ContainedTextField";
             <ContainedTextField
               placeholder="Lesson Name"
             />
-            <ContainedTextField
-              placeholder="Key Unit Competency (s)"
+            <SelectField
+             placeholder="Key Unit Competency (s)"
+             items={subTopic}
+             modalHeader="Select sub topic"
+             disabled={true}
+             value={keyUnitCompetency}
             />
-            <PrimaryButton title="Proceed" onPress={handleSubmit}/>
+            <PrimaryButton 
+             title="Proceed" 
+             onPress={handleSubmit}
+
+            />
           </ScrollView>
         </Animatable.View>
         </TouchableWithoutFeedback>

@@ -15,36 +15,21 @@ import PrimaryButton from "../../components/button/PrimaryButton";
 import ModuleHeader from "../../components/moduleHeader";
 import SelectField from "../../components/selectField";
 import RadioButton from "../../components/radioButton";
+import { stardardCreterial, valuesBloomTaxonomy, attitude } from '../../utils'
+import ModuleHeaderText from "./LessonPlanModuleHeadertext";
+
+
 
 const LessonPlanAttitudeAndValues = ({ navigation }) => {
   const handleSubmit = () => {
     navigation.navigate("ConfirmAttitudeAndValues");
   };
 
-  const topics = [
-    {
-      label: 'Item 1',
-      id: 1
-    },
-    {
-      label: 'Item 2',
-      id: 2
-    },
-    {
-      label: 'Item 3',
-      id: 2
-    },
-    {
-      label: 'Item 4',
-      id: 2
-    },
-  ]
-
   return (
     <LinearGradient style={styles.container} colors={["#7C32FF", "#C738D8"]}>
       <StatusBar style="light" />
       <View style={styles.headerIcon}>
-        <ModuleHeader navigation={navigation} moduleTitle="Attitude and Values" />
+        <ModuleHeader navigation={navigation} moduleTitle="Instructional obj" />
       </View>
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : ""}
@@ -57,20 +42,21 @@ const LessonPlanAttitudeAndValues = ({ navigation }) => {
             easing="ease"
           >
             <ScrollView style={styles.scrollCtn}>
+            <ModuleHeaderText placeholder="Attitude and Values"/>
               <SelectField
                 placeholder="Scheme of work content"
-                items={topics}
+                items={attitude}
                 modalHeader="Scheme of work content"
               />
               <SelectField
                 placeholder="Bloom taxonomy level"
-                items={topics}
+                items={valuesBloomTaxonomy}
                 modalHeader="Bloom taxonomy level"
               />
               <SelectField
-                placeholder="Standar criteria perfomance"
-                items={topics}
-                modalHeader="Standar criteria perfomance"
+                placeholder="Standard criteria perfomance"
+                items={stardardCreterial}
+                modalHeader="Standard criteria perfomance"
               />
               <View>
                 <Text style={styles.infoText}>

@@ -43,15 +43,15 @@ import Colors from "../../constants/Colors";
             </View>
             <View style={styles.cardHeaderCtn}>
               <Text style={styles.key}>Topic</Text>
-              <Text style={styles.value}>Biology</Text>
+              <Text style={styles.value}>Ubushobozi bwo gukoresha ururimi mvugo no mu nyandiko</Text>
             </View>
             <View style={styles.cardHeaderCtn}>
               <Text style={styles.key}>Sub topic</Text>
-              <Text style={styles.value}>Biology</Text>
+              <Text style={styles.value}>Kumva, Kuvuga, Gusoma, Kwandika, Iyigantego n'inyunguramagambo</Text>
             </View>
             <View style={styles.cardHeaderCtn}>
               <Text style={styles.key}>Unit</Text>
-              <Text style={styles.value}>Biology</Text>
+              <Text style={styles.value}>Uburinganire n’ubwuzuzanye mu muryango.</Text>
             </View>
             <View style={styles.cardHeaderCtn}>
               <Text style={styles.key}>Lesson name</Text>
@@ -59,7 +59,7 @@ import Colors from "../../constants/Colors";
             </View>
             <View style={styles.cardHeaderCtn}>
               <Text style={styles.key}>Key unit competency</Text>
-              <Text style={styles.value}>Learners should know how to....</Text>
+              <Text style={styles.value}>Gusesengura imyandiko ku buringanire n’ubwuzuzanye mu muryango</Text>
             </View>
           </ConfirmLessonPlanCard>
           <View>

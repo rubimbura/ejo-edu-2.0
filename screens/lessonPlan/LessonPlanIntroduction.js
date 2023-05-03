@@ -13,12 +13,13 @@ import { StatusBar } from "expo-status-bar";
 import * as Animatable from "react-native-animatable";
 import PrimaryButton from "../../components/button/PrimaryButton";
 import ModuleHeader from "../../components/moduleHeader";
-import SelectField from "../../components/selectField";
-import RadioButton from "../../components/radioButton";
 import ContainedTextField from "../../components/textfield/ContainedTextField";
 import UploadContainer from "../../components/uploadContainer";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import ModuleHeaderText from "./LessonPlanModuleHeadertext";
+import SelectField from "../../components/selectField";
+import { indicativeContent, CrossCuttingIssues, teachingTechniques, instructionMaterials } from '../../utils'
+
 
 
 
@@ -44,12 +45,27 @@ const LessonPlanIntroduction = ({ navigation }) => {
             easing="ease">
             <ScrollView style={styles.scrollCtn} showsVerticalScrollIndicator={false}>
               <ModuleHeaderText placeholder="Introduction"/>
-              <ContainedTextField placeholder="Content indicator" />
+              <SelectField 
+                 placeholder="Indicative content"
+                 modalHeader="Indicative content"
+                 items={indicativeContent}
+              />
               <ContainedTextField placeholder="Student syllabus area" />
-              <ContainedTextField placeholder="Teaching techniques" />
-              <ContainedTextField placeholder="Cross cutting issues" />
-              <ContainedTextField placeholder="Type of instructional material" />
-            
+              <SelectField 
+                 placeholder="Teaching techniques"
+                 modalHeader="Teaching techniques"
+                 items={teachingTechniques}
+              />
+              <SelectField 
+                 placeholder="Cross cutting issues"
+                 modalHeader="Cross cutting issues"
+                 items={CrossCuttingIssues}
+              />
+              <SelectField 
+                 placeholder="Type of instructional material"
+                 modalHeader="Type of instructional material"
+                 items={instructionMaterials}
+              />
               <UploadContainer placeholder="Upload Instructional Material"/>
               <View style={styles.uploadedContainer}>
                 <View style={styles.uploadedItem}>

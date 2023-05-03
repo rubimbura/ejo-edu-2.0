@@ -6,6 +6,8 @@ import PrimaryButton from "../../components/button/PrimaryButton";
 import ModuleHeader from "../../components/moduleHeader";
 import ConfirmLessonPlanCard from "../../components/cards/ConfirmLessonPlanCard";
 import Colors from "../../constants/Colors";
+import ModuleHeaderText from "./LessonPlanModuleHeadertext";
+
 
 const LessonPlanConfirmSkills = ({ navigation }) => {
   const handleSubmit = () => {
@@ -16,24 +18,26 @@ const LessonPlanConfirmSkills = ({ navigation }) => {
     <LinearGradient style={styles.container} colors={["#7C32FF", "#C738D8"]}>
       <StatusBar style="light" />
       <View style={styles.headerIcon}>
-        <ModuleHeader navigation={navigation} moduleTitle="Skills" />
+        <ModuleHeader navigation={navigation} moduleTitle="Instructional obj" />
       </View>
       <Animatable.View
         style={styles.bodyCtn}
         animation="fadeInUpBig"
         easing="ease"
       >
+      <ModuleHeaderText placeholder="Skills"/>
+
         <ConfirmLessonPlanCard>
           <View style={styles.cardHeaderCtn}>
             <Text style={styles.cardHeaderText}>Instruction Objectives</Text>
           </View>
           <View style={styles.cardHeaderCtn}>
             <Text style={styles.key}>Scheme of work content</Text>
-            <Text style={styles.value}>Definition of biology</Text>
+            <Text style={styles.value}>Gusobanura akamaro k’uburinganire n’ubwuzuzanye mu muryango</Text>
           </View>
           <View style={styles.cardHeaderCtn}>
             <Text style={styles.key}>Bloom taxonomy level</Text>
-            <Text style={styles.value}>Understanding</Text>
+            <Text style={styles.value}>Skills</Text>
           </View>
           <View style={styles.cardHeaderCtn}>
             <Text style={styles.key}>Standard criteria perfomance</Text>

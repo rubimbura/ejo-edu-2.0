@@ -36,11 +36,6 @@ const LessonPlanOverview = ({ navigation }) => {
       <View style={styles.headerIcon}>
         <ModuleHeader navigation={navigation} moduleTitle="Overview" />
       </View>
-      <KeyboardAvoidingView
-        behavior={Platform.OS === "ios" ? "padding" : ""}
-        style={{ flex: 5 }}
-      >
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <Animatable.View
             style={styles.bodyCtn}
             animation="fadeInUpBig"
@@ -58,36 +53,33 @@ const LessonPlanOverview = ({ navigation }) => {
             >
               <List.Accordion
                 title="Instructional Objectives"
-                style={styles.accordion}
-              >
+                style={styles.accordion}>
                 <View style={{ width: "90%", alignSelf: "center" }}>
                   <ConfirmLessonPlanCard>
                     <View style={styles.cardHeaderCtn}>
                       <Text style={styles.key}>Topic</Text>
-                      <Text style={styles.value}>Biology</Text>
+                      <Text style={styles.value}>Ubushobozi bwo gukoresha ururimi mvugo no mu nyandiko</Text>
                     </View>
                     <View style={styles.cardHeaderCtn}>
                       <Text style={styles.key}>Sub-topic</Text>
-                      <Text style={styles.value}>Define biology</Text>
+                      <Text style={styles.value}>Kumva, Kuvuga, Gusoma, Kwandika, Iyigantego n'inyunguramagambo</Text>
                     </View>
                     <View style={styles.cardHeaderCtn}>
                       <Text style={styles.key}>Unit</Text>
                       <Text style={styles.value}>
-                        Your sentence is grammatically correct, but I would
-                        suggest a minor change for clarity and precision.
+                        Uburinganire n’ubwuzuzanye mu muryango.
                       </Text>
                     </View>
                     <View style={styles.cardHeaderCtn}>
                       <Text style={styles.key}>Lesson name</Text>
                       <Text style={styles.value}>
-                        Your sentence is grammatically correct, but I would
-                        suggest a minor change for clarity and precision.
+                        Uburinganire n'ubwuzuzanye mu muryango 
                       </Text>
                     </View>
                     <View style={styles.cardHeaderCtn}>
                       <Text style={styles.key}>Key unit competency</Text>
                       <Text style={styles.value}>
-                        The student should be able to.....
+                        Gusesengura imyandiko ku buringanire n’ubwuzuzanye mu muryango
                       </Text>
                     </View>
                   </ConfirmLessonPlanCard>
@@ -100,15 +92,7 @@ const LessonPlanOverview = ({ navigation }) => {
                   <View style={styles.cardHeaderCtn}>
                     <Text style={styles.key}>Cross cutting issues</Text>
                     <Text style={styles.value}>
-                      Your sentence is grammatically correct, but I would
-                      suggest a minor change for clarity and precision.
-                    </Text>
-                  </View>
-                  <View style={styles.cardHeaderCtn}>
-                    <Text style={styles.key}>Student syllabus area</Text>
-                    <Text style={styles.value}>
-                      Your sentence is grammatically correct, but I would
-                      suggest a minor change for clarity and precision.
+                      Environment and sustainability.
                     </Text>
                   </View>
                   <View style={styles.cardHeaderCtn}>
@@ -121,15 +105,14 @@ const LessonPlanOverview = ({ navigation }) => {
                   <View style={styles.cardHeaderCtn}>
                     <Text style={styles.key}>Teaching techniques</Text>
                     <Text style={styles.value}>
-                      Your sentence is grammatically correct, but I would
-                      suggest a minor change for clarity and precision.
+                      Live lecturing, Guest speakers, Audio visual presentation, Field vist, Assigned reading/text, peer teaching, classroom display. 
                     </Text>
                   </View>
-                  <View style={styles.cardHeaderCtn}>
+                  {/* <View style={styles.cardHeaderCtn}>
                     <Text style={styles.key}>Sub teaching techniques</Text>
                     <Text style={styles.value}>Technique one</Text>
                     <Text style={styles.value}>Technique two</Text>
-                  </View>
+                  </View> */}
                 </ConfirmLessonPlanCard>
                 </View>
               </List.Accordion>
@@ -146,8 +129,6 @@ const LessonPlanOverview = ({ navigation }) => {
               </View>
             </ScrollView>
           </Animatable.View>
-        </TouchableWithoutFeedback>
-      </KeyboardAvoidingView>
     </LinearGradient>
   );
 };

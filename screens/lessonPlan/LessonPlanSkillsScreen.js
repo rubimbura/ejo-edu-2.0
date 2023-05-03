@@ -15,36 +15,20 @@ import PrimaryButton from "../../components/button/PrimaryButton";
 import ModuleHeader from "../../components/moduleHeader";
 import SelectField from "../../components/selectField";
 import RadioButton from "../../components/radioButton";
+import { stardardCreterial, skills } from "../../utils";
+import ModuleHeaderText from "./LessonPlanModuleHeadertext";
+
 
 const LessonPlanSkillsScreen = ({ navigation }) => {
   const handleSubmit = () => {
     navigation.navigate("ConfirmSkills");
   };
 
-  const topics = [
-    {
-      label: 'Item 1',
-      id: 1
-    },
-    {
-      label: 'Item 2',
-      id: 2
-    },
-    {
-      label: 'Item 3',
-      id: 2
-    },
-    {
-      label: 'Item 4',
-      id: 2
-    },
-  ]
-
   return (
     <LinearGradient style={styles.container} colors={["#7C32FF", "#C738D8"]}>
       <StatusBar style="light" />
       <View style={styles.headerIcon}>
-        <ModuleHeader navigation={navigation} moduleTitle="Skills" />
+        <ModuleHeader navigation={navigation} moduleTitle="Instructional Obj" />
       </View>
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : ""}
@@ -57,24 +41,27 @@ const LessonPlanSkillsScreen = ({ navigation }) => {
             easing="ease"
           >
             <ScrollView style={styles.scrollCtn}>
+              <ModuleHeaderText placeholder="Skills" />
+
               <SelectField
                 placeholder="Scheme of work content"
-                items={topics}
+                items={skills}
                 modalHeader="Scheme of work content"
               />
               <SelectField
                 placeholder="Bloom taxonomy level"
-                items={topics}
                 modalHeader="Bloom taxonomy level"
+                disabled={true}
+                value={"skils"}
               />
               <SelectField
-                placeholder="Standar criteria perfomance"
-                items={topics}
-                modalHeader="Standar criteria perfomance"
+                placeholder="Standard criteria perfomance"
+                items={stardardCreterial}
+                modalHeader="Standard criteria perfomance"
               />
               <View>
                 <Text style={styles.infoText}>
-                  Do you have a new type of scheme of work content to teach
+                  Do you want to explore more skills content?
                 </Text>
               </View>
               <RadioButton />

@@ -22,7 +22,7 @@ const ModuleHeader = ({ navigation, moduleTitle, level, subject, name }) => {
           <View style={styles.ModuleCtn}>
             <Text style={styles.moduleText}>{moduleTitle}</Text>
             <View style={styles.subModuleCtn}>
-              <Text style={styles.subModuleText}>{level}</Text>
+              <Text style={styles.subModuleText}>S4 MPC</Text>
               <Text style={styles.subject}>{subject}</Text>
             </View>
           </View>

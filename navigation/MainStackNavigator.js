@@ -92,7 +92,6 @@ const HomeStackNavigator = () => {
       <Stack.Screen name='lessonPlanDevelopemnt' component={LessonPlanDevelopemnt}/>
       <Stack.Screen name='lessonPlanConculusion' component={LessonPlanConculusion}/>
       <Stack.Screen name='lessonPlanOverview' component={LessonPlanOverview}/>
-
     </Stack.Navigator>
   )
 }

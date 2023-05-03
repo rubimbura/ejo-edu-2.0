@@ -18,27 +18,34 @@ import Colors from "../../constants/Colors";
       navigation.navigate('AddLessonPlanName')
     }
 
+    const handleItemPressed = () => {
+      navigation.navigate('lessonPlanOverview')
+    }
+
     const LessonPlans = [
       {
-        name: 'New lesson plan',
+        name: `Uburinganire n'ubwuzuzane mu muryango 4`,
         status: 'Ongoing',
-        color: '#FFD700'
+        color: '#FFD700',
+        date: '02-01-2023'
       },
       {
-        name: 'Lesson plan',
+        name: `Uburinganire n'ubwuzuzane mu muryango 3`,
         status: 'Completed',
-        color: '#537A5A'
+        color: '#537A5A',
+        date: '14-01-2023'
       },
       {
-        name: 'Lesson Plan name',
+        name: `Uburinganire n'ubwuzuzane mu muryango 2`,
         status: 'Rejected',
-        color: '#E50E0E'
-
+        color: '#E50E0E',
+        date: '25-03-2023'
       },
       {
-        name: 'Lesson plan',
+        name: `Uburinganire n'ubwuzuzane mu muryango 1`,
         status: 'Completed',
-        color: '#537A5A'
+        color: '#537A5A',
+        date: '01-04-2023'
       },
     ]
 
@@ -47,7 +54,7 @@ import Colors from "../../constants/Colors";
         el.isChecked = false
       }
       return(
-        <LessonPlanContainer name={el.name} status={el.status} color={el.color}/>
+        <LessonPlanContainer onPress={handleItemPressed} name={el.name} status={el.status} color={el.color} date={el.date}/>
       )
     })
 
@@ -62,7 +69,7 @@ import Colors from "../../constants/Colors";
           animation="fadeInUpBig"
           easing="ease">
           <PrimaryButton onPress={handleSubmit} title="New Lesson Plan"/>
-          <ScrollView>
+          <ScrollView showsVerticalScrollIndicator={false}>
             {displayStudent}
           </ScrollView>
         </Animatable.View>

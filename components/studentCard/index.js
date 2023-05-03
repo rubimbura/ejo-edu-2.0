@@ -1,6 +1,8 @@
 import { Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import student_avatar from "../../assets/images/student-avatar.png";
-// import passport_pic from '../../assets/images/passport-pic.jpeg'
+import passport_pic from '../../assets/images/student-icon2.jpeg'
+import passport_pic_male from '../../assets/images/student-icon.jpeg'
+
 
 const StudentCard = ({onPress, handleLongPress, data, isChecked}) => {
   return (
@@ -9,7 +11,7 @@ const StudentCard = ({onPress, handleLongPress, data, isChecked}) => {
         shadowColor: 'black',
         borderColor: !isChecked  ? '#28D40C' : '#FC0707' 
       }]} onPress={onPress} onLongPress={handleLongPress}>
-        <Image source={student_avatar} style={styles.icon} />
+        <Image source={passport_pic} style={styles.icon} />
         <Text style={styles.name}>{data?.firstName} {data?.lastName}</Text>
         <Text style={styles.subName}>00XYZ</Text>
       </TouchableOpacity>

@@ -15,11 +15,11 @@ import {
   import ModuleHeader from "../../components/moduleHeader";
   import SelectField from "../../components/selectField";
   import RadioButton from "../../components/radioButton";
-  import ContainedTextField from "../../components/textfield/ContainedTextField";
   import UploadContainer from "../../components/uploadContainer";
   import { MaterialCommunityIcons } from '@expo/vector-icons';
   import ModuleHeaderText from "./LessonPlanModuleHeadertext";
   import LessonPlanGeneralText from "./LessonPlanGeneralText";
+  import { CrossCuttingIssues, teachingTechniques, instructionMaterials } from '../../utils'
   
   
   
@@ -51,15 +51,27 @@ import {
 
                 <LessonPlanGeneralText placeholder="Do the cross cutting issues match the introduction?"/>
                 <RadioButton/>
-                <SelectField placeholder="Cross cutting issues"/>
+                <SelectField 
+                  placeholder="Cross cutting issues"
+                  modalHeader="Cross cutting issues"
+                  items={CrossCuttingIssues}
+                />
 
                 <LessonPlanGeneralText placeholder="Do the learning techniques match the introduction?"/>
                 <RadioButton/>
-                <SelectField placeholder="Teaching techniques"/>
+                <SelectField 
+                  placeholder="Teaching techniques"
+                  modalHeader="Teaching techniques"
+                  items={teachingTechniques}
+                />
 
                 <LessonPlanGeneralText placeholder="Do the student syllabus area match the introduction?"/>
                 <RadioButton/>
-                <SelectField placeholder="Type of instructional material"/>
+                <SelectField 
+                  placeholder="Type of instructional material"
+                  modalHeader="Instructional material"
+                  items={instructionMaterials}
+                />
               
 
 
