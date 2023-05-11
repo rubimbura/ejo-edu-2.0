@@ -98,8 +98,7 @@ const LessonPlanOverview = ({ navigation }) => {
                   <View style={styles.cardHeaderCtn}>
                     <Text style={styles.key}>Student syllabus area</Text>
                     <Text style={styles.value}>
-                      Your sentence is grammatically correct, but I would
-                      suggest a minor change for clarity and precision.
+                      Page 26
                     </Text>
                   </View>
                   <View style={styles.cardHeaderCtn}>
